@@ -62,6 +62,10 @@ Here are some facts regarding the student, please try to use them all in the ess
     with open(args.output, "w") as f:
         print(response["candidates"][0]["content"]["parts"][0]["text"], file=f)
 
+    print(
+        "This is the github link where all the code is located: https://github.com/VG-Fish/Answer-College-Supplemental"
+    )
+
 
 if __name__ == "__main__":
     main()
