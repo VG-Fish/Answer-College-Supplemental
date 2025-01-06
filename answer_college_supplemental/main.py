@@ -55,7 +55,7 @@ Here are some facts regarding the student, please try to use them all in the ess
     )
     response = requests.get(GEMINI_URL).json()
 
-    print("The response is saved to the output file.")
+    print(f"The response is saved to the output file, which is {args.output}")
 
     with open(args.output, "w") as f:
         print(response["candidates"][0]["content"]["parts"][0]["text"], file=f)
