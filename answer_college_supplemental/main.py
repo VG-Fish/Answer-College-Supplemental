@@ -53,7 +53,13 @@ Here are some facts regarding the student, please try to use them all in the ess
     print(
         "Calling Google Gemini now. Please note that since I'm hosting my Flask app on Vercel, there might be a cold start, so this may take a while.\n"
     )
-    response = requests.get(GEMINI_URL).json()
+    response = requests.get(GEMINI_URL)
+
+    if not response:
+        print("Unfortunately, the Google Gemini API is experiencing high load right now. Try this tool again later!")
+        return
+    
+    response = response.json()
 
     print(
         f"The Google Gemini response is saved to the output file, which is {args.output}"

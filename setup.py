@@ -4,7 +4,7 @@ from setuptools import setup, find_packages
 # twine upload dist/*
 setup(
     name="answer_college_supplemental",
-    version="0.5",
+    version="0.6",
     packages=find_packages(),
     install_requires=["requests>=2.32"],
     author="Vishwesswaran Gopal",
